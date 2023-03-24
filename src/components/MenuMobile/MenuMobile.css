@@ -1,0 +1,104 @@
+.menu-mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .menu-mobile {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 52px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: white;
+    border-top: 1px solid #e4e4e4;
+  }
+
+  .menu-mobile__list {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-mobile__btn:nth-child(1) {
+    order: 1;
+  }
+  .menu-mobile__btn:nth-child(2) {
+    order: 3;
+  }
+  .menu-mobile__btn:nth-child(3) {
+    order: 4;
+  }
+  .menu-mobile__btn:nth-child(4) {
+    order: 5;
+  }
+  .menu-mobile__btn:nth-child(5) {
+    order: 2;
+  }
+
+  .menu-mobile__btn {
+    list-style-type: none;
+    display: flex;
+    flex-grow: 1;
+    height: 52px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-mobile__src {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .menu-mobile__src-home {
+    background-image: url(../../image/icon-home-mobile.png);
+  }
+
+  .menu-mobile__src-home-active {
+    background-image: url(../../image/icon-home-mobile-active.png);
+  }
+
+  .menu-mobile__src-catalog {
+    background-image: url(../../image/icon-menu-burger-mobile.png);
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .menu-mobile__src-catalog-active {
+    background-image: url(../../image/icon-menu-burger-mobile-active.png);
+  }
+
+  .menu-mobile__src-basket {
+    background-image: url(../../image/icon-basket-mobile.png);
+  }
+
+  .menu-mobile__src-basket-active {
+    background-image: url(../../image/icon-basket-mobile-active.png);
+  }
+
+  .menu-mobile__src-like {
+    background-image: url(../../image/icon-like-mobile.png);
+  }
+
+  .menu-mobile__src-like-active {
+    background-image: url(../../image/icon-like-mobile-active.png);
+  }
+
+  .menu-mobile__src-profile {
+    background-image: url(../../image/icon-user-mobile.png);
+  }
+
+  .menu-mobile__src-profile-active {
+    background-image: url(../../image/icon-user-mobile-active.png);
+  }
+}

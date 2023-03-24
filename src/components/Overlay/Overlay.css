@@ -1,0 +1,16 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 701px) {
+  .overlay-active {
+    display: flex;
+    z-index: 95;
+  }
+}
