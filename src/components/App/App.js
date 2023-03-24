@@ -35,11 +35,14 @@ function App() {
           openNavCatalog={openNavCatalog}
           setOpenNavCatalog={setOpenNavCatalog}
         />
+        <MenuMobile
+          openNavCatalog={openNavCatalog}
+          setOpenNavCatalog={setOpenNavCatalog}
+        />
         <Overlay
           overlayVivible={openNavCatalog}
           setOpenNavCatalog={setOpenNavCatalog}
         />
-        <MenuMobile openNavCatalog={openNavCatalog} setOpenNavCatalog={setOpenNavCatalog}/>
       </div>
     </CurrentUserContext.Provider>
   );

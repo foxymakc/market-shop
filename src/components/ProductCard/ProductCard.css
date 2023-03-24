@@ -1,0 +1,112 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 12 * 6 - 8px);
+  margin: 0 4px 24px;
+}
+
+.product-card__container {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.product-card__img-container {
+  display: flex;
+  width: 100%;
+  padding-top: calc(100% * (240 / 180));
+  height: 0;
+  position: relative;
+  margin: 0 0 4px;
+  background: #f6f6f9;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.product-card__img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.product-card__bottom-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.product-card__price-container {
+  display: flex;
+  width: 100%;
+}
+
+.product-card__price-text {
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 16px;
+  margin: 0;
+  margin-right: 10px;
+  background-color: #f4c500;
+  border-radius: 8px;
+  padding: 5px 5px;
+}
+
+.product-card__sale-text {
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  padding: 5px 5px;
+  text-decoration: line-through;
+  color: #a0a0a0;
+}
+
+.product-card__name {
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  margin-top: 6px;
+}
+
+.product-card:hover .product-card__name {
+  color: #f4c500;
+}
+
+@media (min-width: 768px) {
+  .product-card {
+    width: calc(100% / 12 * 3 - 8px);
+  }
+}
+
+@media (min-width: 954px) {
+  .product-card {
+    width: calc(100% / 12 * 2.4 - 8px);
+  }
+}
+
+@media (min-width: 1140px) {
+  .product-card {
+    width: calc(100% / 12 * 2 - 32px);
+    margin: 0 16px 32px;
+  }
+}
+
+@media (min-width: 1326px) {
+  .product-card {
+    width: calc(100% / 12 * 1.714 - 32px);
+  }
+}
