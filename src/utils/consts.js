@@ -128,6 +128,30 @@ export const listPurchaseReturns = [
   },
 ];
 
+//Shop
+export const shopFilterList = [
+  {
+    id: 1,
+    name: "Популярные",
+    meaning: "popular",
+  },
+  {
+    id: 2,
+    name: "Новинки",
+    meaning: "new",
+  },
+  {
+    id: 3,
+    name: "Сначала дешёвые",
+    meaning: "cheap",
+  },
+  {
+    id: 4,
+    name: "Сначала дорогие",
+    meaning: "expensive",
+  },
+];
+
 //////////////////////////////////////////////
 export const listProduct = [
   {
@@ -137,54 +161,68 @@ export const listProduct = [
     sale: "1200",
     img: testImg,
     imgAlt: "usb переходник",
+    views: 1,
+    date: "023-07-09T23:00:00"
   },
   {
     id: 2,
     name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
-    price: "1000",
+    price: "1001",
     sale: "1200",
     img: testImg,
     imgAlt: "usb переходник",
+    views: 1,
+    date: "023-07-09T23:00:00"
   },
   {
     id: 3,
     name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
-    price: "1000",
+    price: "1020",
     sale: "1200",
     img: testImg,
     imgAlt: "usb переходник",
+    views: 1,
+    date: "023-07-08T23:00:00"
   },
   {
     id: 4,
     name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
-    price: "1000",
+    price: "1100",
     sale: "1200",
     img: testImg,
     imgAlt: "usb переходник",
+    views: 1,
+    date: "023-07-03T23:00:00"
   },
   {
     id: 5,
     name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
-    price: "1000",
+    price: "1003",
     sale: "1200",
     img: testImg,
     imgAlt: "usb переходник",
+    views: 12,
+    date: "023-07-09T23:00:00"
   },
   {
     id: 6,
     name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
-    price: "1000",
+    price: "1500",
     sale: "1200",
     img: testImg,
     imgAlt: "usb переходник",
+    views: 11,
+    date: "023-07-09T23:00:00"
   },
   {
     id: 7,
     name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
-    price: "1000",
+    price: "1300",
     sale: "1200",
     img: testImg,
     imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-09T23:00:00"
   },
   {
     id: 8,
@@ -193,6 +231,8 @@ export const listProduct = [
     sale: "1200",
     img: testImg,
     imgAlt: "usb переходник",
+    views: 1,
+    date: "023-07-09T23:00:00"
   },
   {
     id: 9,
@@ -201,6 +241,8 @@ export const listProduct = [
     sale: "1200",
     img: testImg,
     imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
   },
   {
     id: 10,
@@ -209,5 +251,157 @@ export const listProduct = [
     sale: "1200",
     img: testImg,
     imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
+  },
+  {
+    id: 11,
+    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
+    price: "1000",
+    sale: "1200",
+    img: testImg,
+    imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
+  },
+  {
+    id: 12,
+    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
+    price: "1000",
+    sale: "1200",
+    img: testImg,
+    imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
+  },
+  {
+    id: 13,
+    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
+    price: "1000",
+    sale: "1200",
+    img: testImg,
+    imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
+  },
+  {
+    id: 14,
+    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
+    price: "1000",
+    sale: "1200",
+    img: testImg,
+    imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
+  },
+  {
+    id: 15,
+    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
+    price: "1000",
+    sale: "1200",
+    img: testImg,
+    imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
+  },
+  {
+    id: 16,
+    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
+    price: "1000",
+    sale: "1200",
+    img: testImg,
+    imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
+  },
+  {
+    id: 17,
+    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
+    price: "1000",
+    sale: "1200",
+    img: testImg,
+    imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
+  },
+  {
+    id: 18,
+    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
+    price: "1000",
+    sale: "1200",
+    img: testImg,
+    imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
+  },
+  {
+    id: 19,
+    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
+    price: "1000",
+    sale: "1200",
+    img: testImg,
+    imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
+  },
+  {
+    id: 20,
+    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
+    price: "1000",
+    sale: "1200",
+    img: testImg,
+    imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
+  },
+  {
+    id: 21,
+    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
+    price: "1000",
+    sale: "1200",
+    img: testImg,
+    imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
+  },
+  {
+    id: 22,
+    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
+    price: "1000",
+    sale: "1200",
+    img: testImg,
+    imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
+  },
+  {
+    id: 23,
+    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
+    price: "1000",
+    sale: "1200",
+    img: testImg,
+    imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
+  },
+  {
+    id: 24,
+    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
+    price: "1000",
+    sale: "1200",
+    img: testImg,
+    imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
+  },
+  {
+    id: 25,
+    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
+    price: "1000",
+    sale: "1200",
+    img: testImg,
+    imgAlt: "usb переходник",
+    views: 0,
+    date: "023-07-010T23:00:00"
   },
 ];

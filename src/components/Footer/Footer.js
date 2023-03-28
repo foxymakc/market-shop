@@ -17,12 +17,12 @@ function Footer() {
           <FooterListWrap
             title={"Покупателям"}
             listLink={listLinkBuyers}
-            activeDropdown={activeDropdown.isScreenMd}
+            activeDropdown={activeDropdown.isScreenMobile}
           />
           <FooterListWrap
             title={"Компания"}
             listLink={listLinkCompany}
-            activeDropdown={activeDropdown.isScreenMd}
+            activeDropdown={activeDropdown.isScreenMobile}
           />
         </div>
 
@@ -31,7 +31,7 @@ function Footer() {
             title={"Мы в соцсетях"}
             listLink={listLinkSotial}
             sotial={true}
-            activeDropdown={activeDropdown.isScreenMd}
+            activeDropdown={activeDropdown.isScreenMobile}
           />
           <p className="footer__text">
             <span className="footer__copyright-text">© 2010-2023</span> Market
