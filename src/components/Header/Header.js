@@ -2,9 +2,15 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../image/logo.png";
 import SearchForm from "../SearchForm/SearchForm";
+import { useDispatch } from "react-redux";
+import { clickNavCatalogAction } from "../../store/navCatalogReduser";
 import "./Header.css";
 
-export default function Header({ setOpenNavCatalog }) {
+export default function Header() {
+  const dispatch = useDispatch();
+  const clickNavCatalog = () => {
+    dispatch(clickNavCatalogAction(true));
+  };
   return (
     <header className="header">
       <div className="header__container">
@@ -25,9 +31,7 @@ export default function Header({ setOpenNavCatalog }) {
             </NavLink>
             <button
               className="header__btn header__btn-catalog"
-              onClick={() => {
-                setOpenNavCatalog(true);
-              }}
+              onClick={clickNavCatalog}
             ></button>
           </div>
           <div className="header__nav-menu">

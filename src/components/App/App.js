@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
 import AppRouter from "../AppRouter/AppRouter";
 import MenuMobile from "../MenuMobile/MenuMobile";
@@ -8,41 +8,31 @@ import NavCatalog from "../NavCatalog/NavCatalog";
 import Overlay from "../Overlay/Overlay";
 
 function App() {
-  const [openNavCatalog, setOpenNavCatalog] = useState(false);
   // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  // useEffect(() => {
     // ЧекПользователя.then(data => {
-      // user.setUser(true)
-      // user.setIsAuth(true)
+    // user.setUser(true)
+    // user.setIsAuth(true)
     // })
     // .catch((err) => {console.error(err); })
     // .finally(() => {setLoading(false)})
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   // if (loading) {
   //     return <Spinner/>
   // }
 
   return (
-      <div className="app">
-        <Header setOpenNavCatalog={setOpenNavCatalog} />
-        <AppRouter />
-        <Footer />
-        <NavCatalog
-          openNavCatalog={openNavCatalog}
-          setOpenNavCatalog={setOpenNavCatalog}
-        />
-        <MenuMobile
-          openNavCatalog={openNavCatalog}
-          setOpenNavCatalog={setOpenNavCatalog}
-        />
-        <Overlay
-          overlayVivible={openNavCatalog}
-          setOpenNavCatalog={setOpenNavCatalog}
-        />
-      </div>
+    <div className="app">
+      <Header />
+      <AppRouter />
+      <Footer />
+      <NavCatalog />
+      <MenuMobile />
+      <Overlay />
+    </div>
   );
 }
 

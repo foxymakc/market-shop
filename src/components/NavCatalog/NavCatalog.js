@@ -1,20 +1,27 @@
 import React from "react";
 import { listCategoryForCatalog } from "../../utils/consts";
 import { NavLink } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { clickNavCatalogAction } from "../../store/navCatalogReduser";
 import "./NavCatalog.css";
 
-export default function NavCatalog({ openNavCatalog, setOpenNavCatalog }) {
+export default function NavCatalog() {
+  const navCatalog = useSelector((state) => state.navCatalog);
+  const dispatch = useDispatch();
+  const clickNavCatalog = () => {
+    dispatch(clickNavCatalogAction(false));
+  };
   return (
     <div
       className={
-        !openNavCatalog ? "nav-catalog" : "nav-catalog nav-catalog-active"
+        !navCatalog.active ? "nav-catalog" : "nav-catalog nav-catalog-active"
       }
     >
       <div className="nav-catalog__container">
         <ul className="nav-catalog__list-category">
           {listCategoryForCatalog.map((category) => (
             <li
-              onClick={() => setOpenNavCatalog(false)}
+              onClick={clickNavCatalog}
               className="nav-catalog__category"
               key={category.id}
             >
@@ -27,7 +34,7 @@ export default function NavCatalog({ openNavCatalog, setOpenNavCatalog }) {
       </div>
       <button
         className="nav-catalog__btn-close"
-        onClick={() => setOpenNavCatalog(false)}
+        onClick={clickNavCatalog}
       ></button>
     </div>
   );
