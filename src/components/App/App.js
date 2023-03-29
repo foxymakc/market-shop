@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import AppRouter from "../AppRouter/AppRouter";
 import MenuMobile from "../MenuMobile/MenuMobile";
 import Header from "../Header/Header";
@@ -9,16 +8,17 @@ import NavCatalog from "../NavCatalog/NavCatalog";
 import Overlay from "../Overlay/Overlay";
 
 function App() {
-  const [currentUser, setCurrentUser] = useState([]);
   const [openNavCatalog, setOpenNavCatalog] = useState(false);
   // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // ЧекПользователя.then(data => {
-    setCurrentUser({ IsAuth: true });
+      // user.setUser(true)
+      // user.setIsAuth(true)
     // })
     // .catch((err) => {console.error(err); })
     // .finally(() => {setLoading(false)})
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // if (loading) {
@@ -26,7 +26,6 @@ function App() {
   // }
 
   return (
-    <CurrentUserContext.Provider value={currentUser}>
       <div className="app">
         <Header setOpenNavCatalog={setOpenNavCatalog} />
         <AppRouter />
@@ -44,7 +43,6 @@ function App() {
           setOpenNavCatalog={setOpenNavCatalog}
         />
       </div>
-    </CurrentUserContext.Provider>
   );
 }
 
