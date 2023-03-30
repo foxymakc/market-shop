@@ -8,8 +8,6 @@ import NavCatalog from "../NavCatalog/NavCatalog";
 import Overlay from "../Overlay/Overlay";
 
 function App() {
-  // const [loading, setLoading] = useState(true);
-
   // useEffect(() => {
     // ЧекПользователя.then(data => {
     // user.setUser(true)

@@ -5,6 +5,7 @@ import { useObserverLoader } from "../../utils/Hooks/useObserverLoader";
 import { BackList } from "../../utils/backFunction";
 import { useSelector, useDispatch } from "react-redux";
 import {
+  rewriteCategoryAction,
   addProductsAction,
   rewriteSortingFlagAction,
   rewriteTotalCountAction,
@@ -13,7 +14,7 @@ import {
 } from "../../store/productReduser";
 import ProductCard from "../../components/ProductCard/ProductCard";
 
-export default function ProductsList({category}) {
+export default function ProductsList({ category }) {
   const amountElm = useAmountElm();
   const dispatch = useDispatch();
   const productRedux = useSelector((state) => state.product);
@@ -33,20 +34,24 @@ export default function ProductsList({category}) {
   const rewriteSortingFlag = (data) => {
     dispatch(rewriteSortingFlagAction(data));
   };
-
+  const rewriteCategory = (data) => {
+    dispatch(rewriteCategoryAction(data));
+  };
   useEffect(() => {
     BackList(
-      productRedux.displayedNumderCards,
+      0,
       amountElm.initialNumberCardsDisplay,
-      "popular"
+      productRedux.sortingFlag,
+      category
     ).then((data) => {
       startRenderProducts(data.products);
       rewriteDisplayedNumderCards(amountElm.initialNumberCardsDisplay);
       rewriteTotalCount(data.countProducts);
-      rewriteSortingFlag("popular");
+      rewriteSortingFlag(data.sortingFlag);
+      rewriteCategory(category)
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [amountElm.loadVisibleAmountProducts]);
+  }, [amountElm.loadVisibleAmountProducts, category]);
 
   useObserverLoader(lastItem, actionInSight);
   function actionInSight(entries) {
@@ -57,7 +62,8 @@ export default function ProductsList({category}) {
       BackList(
         productRedux.displayedNumderCards,
         productRedux.displayedNumderCards + amountElm.addedNumberCards,
-        productRedux.sortingFlag
+        productRedux.sortingFlag,
+        productRedux.category
       ).then((data) => {
         addProducts(data.products);
       });
@@ -68,14 +74,14 @@ export default function ProductsList({category}) {
   }
   return (
     <ul className="products-list">
-      {(productRedux.products).map((product) => (
+      {productRedux.products.map((product) => (
         <ProductCard key={product.id} productInfo={product} />
       ))}
-      {(productRedux.products).length > 0 ? (
-          <span className="products-list__last-item" ref={lastItem}></span>
-        ) : (
-          ""
-        )}
+      {productRedux.products.length > 0 ? (
+        <span className="products-list__last-item" ref={lastItem}></span>
+      ) : (
+        ""
+      )}
     </ul>
   );
 }

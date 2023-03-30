@@ -1,5 +1,5 @@
 const defaultState = {
-  sortingFlag: {},
+  sortingFlag: null,
   category: {},
   products: [],
   displayedNumderCards: 0,
@@ -11,6 +11,7 @@ const ADD_PRODUCTS = "ADD_PRODUCTS";
 const REWRITE_DISPLAYED_NUMDER_CARDS = "REWRITE_DISPLAYED_NUMDER_CARDS";
 const REWRITE_TOTAL_COUNT = "REWRITE_TOTAL_COUNT";
 const REWRITE_SORTING_FLAG = "REWRITE_SORTING_FLAG";
+const REWRITE_CATEGORY = "REWRITE_CATEGORY";
 
 export const productReduser = (state = defaultState, action) => {
   switch (action.type) {
@@ -24,6 +25,8 @@ export const productReduser = (state = defaultState, action) => {
       return { ...state, totalCount: action.payload };
     case REWRITE_SORTING_FLAG:
       return { ...state, sortingFlag: action.payload };
+    case REWRITE_CATEGORY:
+      return { ...state, category: action.payload };
     default:
       return state;
   }
@@ -47,5 +50,9 @@ export const rewriteTotalCountAction = (payload) => ({
 });
 export const rewriteSortingFlagAction = (payload) => ({
   type: REWRITE_SORTING_FLAG,
+  payload,
+});
+export const rewriteCategoryAction = (payload) => ({
+  type: REWRITE_CATEGORY,
   payload,
 });

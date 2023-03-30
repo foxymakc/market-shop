@@ -1,10 +1,8 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import { publicRoutes } from "../../routes";
-// import {CurrentUserContext} from "../../contexts/CurrentUserContext"
 
 export default function AppRouter() {
-    // const {currentUser} = useContext(CurrentUserContext)
   return (
     <Routes>
       {/* {currentUser.isAuth &&

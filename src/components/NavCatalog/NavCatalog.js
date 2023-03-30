@@ -25,7 +25,10 @@ export default function NavCatalog() {
               className="nav-catalog__category"
               key={category.id}
             >
-              <NavLink className="nav-catalog__category-link" to={`/category/${category.src}`}>
+              <NavLink
+                className="nav-catalog__category-link"
+                to={`/category/${category.src}`}
+              >
                 {category.category}
               </NavLink>
             </li>

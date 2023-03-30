@@ -162,7 +162,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 1,
-    date: "023-07-09T23:00:00"
+    date: "023-07-09T23:00:00",
+    category: "electronika"
   },
   {
     id: 2,
@@ -172,7 +173,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 1,
-    date: "023-07-09T23:00:00"
+    date: "023-07-09T23:00:00",
+    category: "electronika"
   },
   {
     id: 3,
@@ -182,7 +184,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 1,
-    date: "023-07-08T23:00:00"
+    date: "023-07-08T23:00:00",
+    category: "electronika"
   },
   {
     id: 4,
@@ -192,7 +195,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 1,
-    date: "023-07-03T23:00:00"
+    date: "023-07-03T23:00:00",
+    category: "himia",
   },
   {
     id: 5,
@@ -202,7 +206,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 12,
-    date: "023-07-09T23:00:00"
+    date: "023-07-09T23:00:00",
+    category: "himia",
   },
   {
     id: 6,
@@ -212,7 +217,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 11,
-    date: "023-07-09T23:00:00"
+    date: "023-07-09T23:00:00",
+    category: "instryment",
   },
   {
     id: 7,
@@ -222,7 +228,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-09T23:00:00"
+    date: "023-07-09T23:00:00",
+    category: "instryment",
   },
   {
     id: 8,
@@ -232,7 +239,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 1,
-    date: "023-07-09T23:00:00"
+    date: "023-07-09T23:00:00",
+    category: "instryment",
   },
   {
     id: 9,
@@ -242,7 +250,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "instryment",
   },
   {
     id: 10,
@@ -252,7 +261,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "",
   },
   {
     id: 11,
@@ -262,7 +272,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "",
   },
   {
     id: 12,
@@ -272,7 +283,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "",
   },
   {
     id: 13,
@@ -282,7 +294,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "",
   },
   {
     id: 14,
@@ -292,7 +305,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "",
   },
   {
     id: 15,
@@ -302,7 +316,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "instryment",
   },
   {
     id: 16,
@@ -312,7 +327,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "instryment",
   },
   {
     id: 17,
@@ -322,7 +338,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "instryment",
   },
   {
     id: 18,
@@ -332,7 +349,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "instryment",
   },
   {
     id: 19,
@@ -342,7 +360,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "instryment",
   },
   {
     id: 20,
@@ -352,7 +371,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "",
   },
   {
     id: 21,
@@ -362,7 +382,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "",
   },
   {
     id: 22,
@@ -382,7 +403,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "",
   },
   {
     id: 24,
@@ -392,7 +414,8 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "",
   },
   {
     id: 25,
@@ -402,6 +425,7 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "",
   },
 ];
