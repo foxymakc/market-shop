@@ -20,7 +20,8 @@ export default function SearchForm() {
         setErrorMessage(" ");
       }, 1500);
     } else {
-      navigate(`/category/${0}/search=${searchString}`)
+      navigate(`/category/${0}/search=${searchString}`);
+      setSearchString("");
     }
   };
 

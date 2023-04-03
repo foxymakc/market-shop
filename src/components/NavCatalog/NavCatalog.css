@@ -83,7 +83,7 @@
 
 @media (max-width: 700px) {
   .nav-catalog {
-    top: 100px;
+    top: 80px;
   }
 
   .nav-catalog__container {
@@ -123,11 +123,5 @@
 
   .nav-catalog__btn-close {
     display: none;
-  }
-}
-
-@media (max-width: 500px) {
-  .nav-catalog {
-    top: 90px;
   }
 }

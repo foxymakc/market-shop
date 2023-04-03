@@ -19,5 +19,6 @@
 @media (max-width: 700px) {
   .shop__container {
     padding: 0 15px;
+    box-sizing: border-box;
   }
 }

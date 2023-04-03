@@ -152,12 +152,27 @@
 }
 
 @media (max-width: 700px) {
+  .header {
+    height: 60px;
+    background-color: white;
+    margin-bottom: 10px;
+  }
+
   .header__container {
     padding: 0 10px;
   }
 
   .header__bottom {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
     flex-wrap: nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #f5f3f3;
+    height: 80px;
   }
 
   .header__nav-menu {

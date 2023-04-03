@@ -43,7 +43,6 @@ export default function ProductsList({ category, search }) {
   };
 
   useEffect(() => {
-    sessionStorage.removeItem("searchText");
     BackList(
       0,
       amountElm.initialNumberCardsDisplay,

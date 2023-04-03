@@ -15,12 +15,12 @@ export default function Category() {
   } else {
     category = params.id;
   }
- 
+
   return (
     <div className="category">
       <div className="category__container">
         <ProductsSorting />
-        <ProductsList category={category} search={search}/>
+        <ProductsList category={category} search={search} />
       </div>
     </div>
   );
