@@ -1,8 +1,14 @@
 import { listProduct } from "./consts";
 
 ////////функционал который должен выполняться на бэке//////////
-////////////////////----ЗАТЫЧКА------/////////////////////////
-export const BackList = (renderElements, sumElement, filter, category) => {
+////////////////////----ЗАГЛУШКА------/////////////////////////
+export const BackList = (
+  renderElements,
+  sumElement,
+  filter,
+  category,
+  searchText
+) => {
   return new Promise((resolve, reject) => {
     let newSortFlag;
     if (filter === null) {
@@ -10,6 +16,15 @@ export const BackList = (renderElements, sumElement, filter, category) => {
     } else {
       newSortFlag = filter;
     }
+
+    if (searchText) {
+      let newSearchText = searchText.toLowerCase();
+      let arr = listProduct.filter(
+        (product) => product.name.toLowerCase().indexOf(newSearchText) >= 0
+      );
+      return resolve(Filter(renderElements, sumElement, newSortFlag, arr));
+    }
+
     if (category) {
       let arr = listProduct.filter((product) => product.category === category);
       resolve(Filter(renderElements, sumElement, newSortFlag, arr));

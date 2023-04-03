@@ -5,12 +5,22 @@ import ProductsList from "../../components/ProductsList/ProductsList";
 import "./Category.css";
 
 export default function Category() {
-  let category = useParams();
+  let category;
+  let search;
+  let params = useParams();
+
+  if (params.search) {
+    search = params.search.split("=")[1];
+    category = {};
+  } else {
+    category = params.id;
+  }
+ 
   return (
     <div className="category">
       <div className="category__container">
         <ProductsSorting />
-        <ProductsList category={category.id} />
+        <ProductsList category={category} search={search}/>
       </div>
     </div>
   );

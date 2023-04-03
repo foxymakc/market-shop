@@ -4,6 +4,7 @@ const defaultState = {
   products: [],
   displayedNumderCards: 0,
   totalCount: 0,
+  search: {},
 };
 
 const START_RENDER_PRODUCTS = "START_RENDER_PRODUCTS";
@@ -12,6 +13,7 @@ const REWRITE_DISPLAYED_NUMDER_CARDS = "REWRITE_DISPLAYED_NUMDER_CARDS";
 const REWRITE_TOTAL_COUNT = "REWRITE_TOTAL_COUNT";
 const REWRITE_SORTING_FLAG = "REWRITE_SORTING_FLAG";
 const REWRITE_CATEGORY = "REWRITE_CATEGORY";
+const REWRITE_SEARCH = "REWRITE_SEARCH";
 
 export const productReduser = (state = defaultState, action) => {
   switch (action.type) {
@@ -27,6 +29,8 @@ export const productReduser = (state = defaultState, action) => {
       return { ...state, sortingFlag: action.payload };
     case REWRITE_CATEGORY:
       return { ...state, category: action.payload };
+    case REWRITE_SEARCH:
+      return { ...state, search: action.payload };
     default:
       return state;
   }
@@ -54,5 +58,9 @@ export const rewriteSortingFlagAction = (payload) => ({
 });
 export const rewriteCategoryAction = (payload) => ({
   type: REWRITE_CATEGORY,
+  payload,
+});
+export const rewriteSearchAction = (payload) => ({
+  type: REWRITE_SEARCH,
   payload,
 });

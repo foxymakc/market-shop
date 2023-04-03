@@ -54,6 +54,11 @@ export const publicRoutes = [
     path: "/category" + "/:id",
     Component: <Category />,
   },
+  {
+    // eslint-disable-next-line no-useless-concat
+    path: "/category" + "/:id" + "/:search",
+    Component: <Category />,
+  },
   // {
   //     path: "/login",
   //     Component: <Shop/>
