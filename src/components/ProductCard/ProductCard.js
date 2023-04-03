@@ -5,7 +5,10 @@ import "./ProductCard.css";
 export default function ProductCard({ productInfo }) {
   return (
     <li className="product-card">
-      <NavLink className="product-card__container" to={`/${productInfo.id}`}>
+      <NavLink
+        className="product-card__container"
+        to={`/product/${productInfo.id}`}
+      >
         <div className="product-card__img-container">
           <img
             className="product-card__img"
@@ -21,6 +24,9 @@ export default function ProductCard({ productInfo }) {
           <p className="product-card__name">{productInfo.name}</p>
         </div>
       </NavLink>
+      <div className="product-card__basket-container">
+        <button className="product-card__basket-btn">В Корзину</button>
+      </div>
     </li>
   );
 }

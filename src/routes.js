@@ -8,6 +8,7 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import Requisites from "./pages/Requisites/Requisites";
 import OurContacts from "./pages/OurContacts/OurContacts";
 import Category from "./pages/Category/Category";
+import CurrentProductCard from "./components/CurrentProductCard/CurrentProductCard";
 
 // export const authRoutes = [
 //     {
@@ -58,6 +59,11 @@ export const publicRoutes = [
     // eslint-disable-next-line no-useless-concat
     path: "/category" + "/:id" + "/:search",
     Component: <Category />,
+  },
+  {
+    // eslint-disable-next-line no-useless-concat
+    path: "/product" + "/:id",
+    Component: <CurrentProductCard />,
   },
   // {
   //     path: "/login",
