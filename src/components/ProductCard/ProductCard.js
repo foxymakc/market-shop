@@ -21,10 +21,11 @@ export default function ProductCard({ productInfo }) {
             <p className="product-card__price-text">{productInfo.price} ₽</p>
             <p className="product-card__sale-text">{productInfo.sale} ₽</p>
           </div>
-          <p className="product-card__name">{productInfo.name}</p>
+          <p className="product-card__name-text">{productInfo.name}</p>
         </div>
       </NavLink>
       <div className="product-card__basket-container">
+        <p className="product-card__basket-container-text">{productInfo.name}</p>
         <button className="product-card__basket-btn">В Корзину</button>
       </div>
     </li>
