@@ -4,10 +4,11 @@ import BasketCard from "../../components/BasketCard/BasketCard";
 import { useSelector, useDispatch } from "react-redux";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import {
- // startRenderBasketProductsAction,
+  // startRenderBasketProductsAction,
   selectedAllProductsAction,
   deleteSelectedProductsInBasketAction,
 } from "../../store/basketReduser";
+import { NavLink } from "react-router-dom";
 
 export default function Basket() {
   const [sumPriceProduct, setSumPriceProduct] = useState(0);
@@ -37,8 +38,6 @@ export default function Basket() {
       } else if (basketRedux.selectedProducts.length === 0) {
         allCheckbox.forEach((elm) => (elm.checked = false));
       }
-    } else {
-      allCheckbox[0].checked = false;
     }
     sumPrice();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -75,38 +74,55 @@ export default function Basket() {
   return (
     <div className="basket">
       <div className="basket__container">
-        <div className="basket__top-btn">
-          <Checkbox title={"Выбрать все"} cliclBtn={toggleSelectedAll} />
-          {basketRedux.selectedProducts.length > 0 ? (
-            <button
-              className="basket__card-delete-select-btn"
-              onClick={deleteSelectedProducts}
-            >
-              Удалить выбранные
-            </button>
-          ) : (
-            ""
-          )}
-        </div>
-        <ul className="basket__list">
-          {basketRedux.products.map((product) => (
-            <BasketCard productInfo={product} key={product.id} />
-          ))}
-        </ul>
-        <div className="basket__bottom-box">
-          <p className="basket__final-product">{`Выбранные товары: ${basketRedux.selectedProducts.length} шт.`}</p>
-          <p className="basket__final-price">{`Общая стоимость: ${sumPriceProduct} ₽`}</p>
-          <button
-            className={
-              basketRedux.selectedProducts.length > 0
-                ? "basket__checkout-btn basket__checkout-btn-active"
-                : "basket__checkout-btn basket__checkout-btn-disabled"
-            }
-            disabled={basketRedux.selectedProducts.length > 0 ? false : true}
-          >
-            Заказать
-          </button>
-        </div>
+        {basketRedux.products.length === 0 ? (
+          <div className="basket__empty-container">
+            <h3 className="basket__empty-title">Корзина пуста</h3>
+            <p className="basket__empty-text">
+              Загляните на главную, чтобы выбрать товары или воспользуйтесь
+              поиском, чтобы найти всё, что нужно.
+            </p>
+            <NavLink className="basket__empty-btn" to="/">
+              Перейти на главную
+            </NavLink>
+          </div>
+        ) : (
+          <>
+            <div className="basket__top-btn">
+              <Checkbox title={"Выбрать все"} cliclBtn={toggleSelectedAll} />
+              {basketRedux.selectedProducts.length > 0 ? (
+                <button
+                  className="basket__card-delete-select-btn"
+                  onClick={deleteSelectedProducts}
+                >
+                  Удалить выбранные
+                </button>
+              ) : (
+                ""
+              )}
+            </div>
+            <ul className="basket__list">
+              {basketRedux.products.map((product) => (
+                <BasketCard productInfo={product} key={product.id} />
+              ))}
+            </ul>
+            <div className="basket__bottom-box">
+              <p className="basket__final-product">{`Выбранные товары: ${basketRedux.selectedProducts.length} шт.`}</p>
+              <p className="basket__final-price">{`Общая стоимость: ${sumPriceProduct} ₽`}</p>
+              <button
+                className={
+                  basketRedux.selectedProducts.length > 0
+                    ? "basket__checkout-btn basket__checkout-btn-active"
+                    : "basket__checkout-btn basket__checkout-btn-disabled"
+                }
+                disabled={
+                  basketRedux.selectedProducts.length > 0 ? false : true
+                }
+              >
+                Заказать
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
