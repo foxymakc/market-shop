@@ -39,9 +39,13 @@ export default function Basket() {
         allCheckbox.forEach((elm) => (elm.checked = false));
       }
     }
-    sumPrice();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [basketRedux.selectedProducts]);
+
+  useEffect(() => {
+    sumPrice();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [basketRedux.selectedProducts, basketRedux.products]);
 
   function toggleSelectedAll() {
     if (basketRedux.selectedProducts.length < basketRedux.products.length) {
