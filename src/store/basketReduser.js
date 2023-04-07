@@ -1,8 +1,6 @@
 const defaultState = {
   products: [],
   selectedProducts: [],
-  totalCount: 0,
-  allCheckbox: false,
 };
 
 const START_RENDER_BASKET_PRODUCTS = "START_RENDER_BASKET_PRODUCTS";
@@ -21,7 +19,7 @@ export const basketReduser = (state = defaultState, action) => {
       return { ...state, products: action.payload };
 
     case ADD_IN_BASKET_PRODUCTS:
-      return { ...state, products: [...state.products, ...action.payload] };
+      return { ...state, products: [...state.products, action.payload] };
 
     case DELETE_IN_BASKET_PRODUCT:
       return {

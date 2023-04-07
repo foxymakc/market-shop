@@ -111,7 +111,7 @@
   line-height: 16px;
   padding: 5px 5px;
   border-radius: 8px;
-  border: 1px solid #f4c500;
+  border: 2px solid #f4c500;
   background-color: #f4c500;
   cursor: pointer;
   width: 100%;
@@ -121,6 +121,14 @@
 
 .product-card__basket-btn:hover {
   opacity: 0.5;
+}
+
+.product-card__basket-btn-active {
+  width: auto;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  text-align: center;
 }
 
 @media (min-width: 768px) {

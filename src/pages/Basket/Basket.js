@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./Basket.css";
 import BasketCard from "../../components/BasketCard/BasketCard";
 import { useSelector, useDispatch } from "react-redux";
-import { listBasketProduct } from "../../utils/consts";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import {
-  startRenderBasketProductsAction,
+ // startRenderBasketProductsAction,
   selectedAllProductsAction,
   deleteSelectedProductsInBasketAction,
 } from "../../store/basketReduser";
@@ -14,21 +13,21 @@ export default function Basket() {
   const [sumPriceProduct, setSumPriceProduct] = useState(0);
   const dispatch = useDispatch();
   const basketRedux = useSelector((state) => state.basketProduct);
-  const startRenderBasketProducts = (data) => {
-    dispatch(startRenderBasketProductsAction(data));
-  };
   const selectedAllProducts = (data) => {
     dispatch(selectedAllProductsAction(data));
   };
   const deleteSelectedProductsInBasket = () => {
     dispatch(deleteSelectedProductsInBasketAction());
   };
+  // const startRenderBasketProducts = (data) => {
+  //   dispatch(startRenderBasketProductsAction(data));
+  // };
 
-  useEffect(() => {
-    // заглушка запроса на бэк за списком корзины
-    startRenderBasketProducts(listBasketProduct);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // useEffect(() => {
+  //   // заглушка запроса на бэк за списком корзины
+  //   startRenderBasketProducts(Список корзины с бэка);
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   useEffect(() => {
     const allCheckbox = document.querySelectorAll(".checkbox__input");

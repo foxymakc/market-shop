@@ -1,8 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { addInBasketProductsAction } from "../../store/basketReduser";
 import "./ProductCard.css";
 
 export default function ProductCard({ productInfo }) {
+  const dispatch = useDispatch();
+  const basketRedux = useSelector((state) => state.basketProduct);
+  const addInBasketProducts = (data) => {
+    dispatch(addInBasketProductsAction(data));
+  };
+  function addToBasket() {
+    //запрос на бэк для добавления в корзину
+    addInBasketProducts(productInfo);
+  }
   return (
     <li className="product-card">
       <NavLink
@@ -25,8 +36,21 @@ export default function ProductCard({ productInfo }) {
         </div>
       </NavLink>
       <div className="product-card__basket-container">
-        <p className="product-card__basket-container-text">{productInfo.name}</p>
-        <button className="product-card__basket-btn">В Корзину</button>
+        <p className="product-card__basket-container-text">
+          {productInfo.name}
+        </p>
+        {basketRedux.products.includes(productInfo) ? (
+          <NavLink
+            className="product-card__basket-btn product-card__basket-btn-active"
+            to="/basket"
+          >
+            Уже в корзине
+          </NavLink>
+        ) : (
+          <button className="product-card__basket-btn" onClick={addToBasket}>
+            В Корзину
+          </button>
+        )}
       </div>
     </li>
   );

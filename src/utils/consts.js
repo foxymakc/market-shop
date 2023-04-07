@@ -163,7 +163,8 @@ export const listProduct = [
     imgAlt: "usb переходник",
     views: 1,
     date: "023-07-09T23:00:00",
-    category: "electronika"
+    category: "electronika",
+    count: 1,
   },
   {
     id: 2,
@@ -174,7 +175,8 @@ export const listProduct = [
     imgAlt: "usb переходник",
     views: 1,
     date: "023-07-09T23:00:00",
-    category: "electronika"
+    category: "electronika",
+    count: 1,
   },
   {
     id: 3,
@@ -185,7 +187,8 @@ export const listProduct = [
     imgAlt: "usb переходник",
     views: 1,
     date: "023-07-08T23:00:00",
-    category: "electronika"
+    category: "electronika",
+    count: 1,
   },
   {
     id: 4,
@@ -197,6 +200,7 @@ export const listProduct = [
     views: 1,
     date: "023-07-03T23:00:00",
     category: "himia",
+    count: 1,
   },
   {
     id: 5,
@@ -208,6 +212,7 @@ export const listProduct = [
     views: 12,
     date: "023-07-09T23:00:00",
     category: "himia",
+    count: 1,
   },
   {
     id: 6,
@@ -219,6 +224,7 @@ export const listProduct = [
     views: 11,
     date: "023-07-09T23:00:00",
     category: "instryment",
+    count: 1,
   },
   {
     id: 7,
@@ -230,6 +236,7 @@ export const listProduct = [
     views: 0,
     date: "023-07-09T23:00:00",
     category: "instryment",
+    count: 1,
   },
   {
     id: 8,
@@ -241,6 +248,7 @@ export const listProduct = [
     views: 1,
     date: "023-07-09T23:00:00",
     category: "instryment",
+    count: 1,
   },
   {
     id: 9,
@@ -252,6 +260,7 @@ export const listProduct = [
     views: 0,
     date: "023-07-010T23:00:00",
     category: "instryment",
+    count: 1,
   },
   {
     id: 10,
@@ -263,6 +272,7 @@ export const listProduct = [
     views: 0,
     date: "023-07-010T23:00:00",
     category: "",
+    count: 1,
   },
   {
     id: 11,
@@ -274,6 +284,7 @@ export const listProduct = [
     views: 0,
     date: "023-07-010T23:00:00",
     category: "",
+    count: 1,
   },
   {
     id: 12,
@@ -285,6 +296,7 @@ export const listProduct = [
     views: 0,
     date: "023-07-010T23:00:00",
     category: "",
+    count: 1,
   },
   {
     id: 13,
@@ -296,6 +308,7 @@ export const listProduct = [
     views: 0,
     date: "023-07-010T23:00:00",
     category: "",
+    count: 1,
   },
   {
     id: 14,
@@ -307,6 +320,7 @@ export const listProduct = [
     views: 0,
     date: "023-07-010T23:00:00",
     category: "",
+    count: 1,
   },
   {
     id: 15,
@@ -318,6 +332,7 @@ export const listProduct = [
     views: 1,
     date: "023-07-010T23:00:00",
     category: "instryment",
+    count: 1,
   },
   {
     id: 16,
@@ -329,6 +344,7 @@ export const listProduct = [
     views: 2,
     date: "023-07-010T23:00:00",
     category: "instryment",
+    count: 1,
   },
   {
     id: 17,
@@ -340,6 +356,7 @@ export const listProduct = [
     views: 0,
     date: "023-07-010T23:00:00",
     category: "instryment",
+    count: 1,
   },
   {
     id: 18,
@@ -351,6 +368,7 @@ export const listProduct = [
     views: 0,
     date: "023-07-010T23:00:00",
     category: "instryment",
+    count: 1,
   },
   {
     id: 19,
@@ -362,6 +380,7 @@ export const listProduct = [
     views: 0,
     date: "023-07-010T23:00:00",
     category: "instryment",
+    count: 1,
   },
   {
     id: 20,
@@ -373,7 +392,9 @@ export const listProduct = [
     views: 0,
     date: "023-07-010T23:00:00",
     category: "",
+    count: 1,
   },
+  
   {
     id: 21,
     name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
@@ -384,6 +405,7 @@ export const listProduct = [
     views: 0,
     date: "023-07-010T23:00:00",
     category: "",
+    count: 1,
   },
   {
     id: 22,
@@ -393,7 +415,9 @@ export const listProduct = [
     img: testImg,
     imgAlt: "usb переходник",
     views: 0,
-    date: "023-07-010T23:00:00"
+    date: "023-07-010T23:00:00",
+    category: "",
+    count: 1,
   },
   {
     id: 23,
@@ -405,6 +429,7 @@ export const listProduct = [
     views: 0,
     date: "023-07-010T23:00:00",
     category: "",
+    count: 1,
   },
   {
     id: 24,
@@ -416,6 +441,7 @@ export const listProduct = [
     views: 0,
     date: "023-07-010T23:00:00",
     category: "",
+    count: 1,
   },
   {
     id: 25,
@@ -427,44 +453,6 @@ export const listProduct = [
     views: 0,
     date: "023-07-010T23:00:00",
     category: "",
-  },
-];
-
-export const listBasketProduct = [
-  {
-    id: 1,
-    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
-    price: "1000",
-    sale: "1200",
-    img: testImg,
-    imgAlt: "usb переходник",
-    views: 1,
-    date: "023-07-09T23:00:00",
-    category: "electronika",
-    count: 1,
-  },
-  {
-    id: 2,
-    name: "USB-C HUB HOCO HB26 на 4 порта 1xUSB3.0 + 3xUSB2.0",
-    price: "1001",
-    sale: "1200",
-    img: testImg,
-    imgAlt: "usb переходник",
-    views: 1,
-    date: "023-07-09T23:00:00",
-    category: "electronika",
-    count: 1,
-  },
-  {
-    id: 3,
-    name: "asjdiuahwyuigbdalskjdjgiaw",
-    price: "1020",
-    sale: "1200",
-    img: testImg,
-    imgAlt: "usb переходник",
-    views: 1,
-    date: "023-07-08T23:00:00",
-    category: "electronika",
     count: 1,
   },
 ];
