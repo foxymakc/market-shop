@@ -95,15 +95,22 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 16px;
-  background-color: #f4c500;
   border: none;
-  cursor: pointer;
   border-radius: 10px;
   padding: 15px 10px;
-  opacity: 1;
 }
 
-.basket__checkout-btn:hover {
+.basket__checkout-btn-active {
+  background-color: #f4c500;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.basket__checkout-btn-disabled {
+  background-color: #d4d4d4;
+}
+
+.basket__checkout-btn-active:hover {
   opacity: 0.5;
 }
 

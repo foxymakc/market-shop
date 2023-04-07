@@ -31,6 +31,13 @@
   margin-left: 10px;
   width: 100%;
   max-width: 500px;
+  text-decoration: none;
+  color: black;
+  opacity: 1;
+}
+
+.basket-card__top-box:hover {
+  opacity: 0.7;
 }
 
 .basket-card__img {
