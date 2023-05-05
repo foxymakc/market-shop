@@ -2,11 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../image/logo.png";
 import SearchForm from "../SearchForm/SearchForm";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { clickNavCatalogAction } from "../../store/navCatalogReduser";
 import "./Header.css";
 
 export default function Header() {
+  const userRedux = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const clickNavCatalog = () => {
     dispatch(clickNavCatalogAction(true));
@@ -37,7 +38,7 @@ export default function Header() {
           <div className="header__nav-menu">
             <NavLink
               className="header__btn header__btn-profile"
-              to="/profile"
+              to={userRedux.isAuth ? "/profile" : "/login"}
             ></NavLink>
             <NavLink
               className="header__btn header__btn-basket"

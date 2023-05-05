@@ -4,7 +4,6 @@ import BasketCard from "../../components/BasketCard/BasketCard";
 import { useSelector, useDispatch } from "react-redux";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import {
-  // startRenderBasketProductsAction,
   selectedAllProductsAction,
   deleteSelectedProductsInBasketAction,
 } from "../../store/basketReduser";
@@ -20,9 +19,6 @@ export default function Basket() {
   const deleteSelectedProductsInBasket = () => {
     dispatch(deleteSelectedProductsInBasketAction());
   };
-  // const startRenderBasketProducts = (data) => {
-  //   dispatch(startRenderBasketProductsAction(data));
-  // };
 
   // useEffect(() => {
   //   // заглушка запроса на бэк за списком корзины

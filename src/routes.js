@@ -9,13 +9,19 @@ import Requisites from "./pages/Requisites/Requisites";
 import OurContacts from "./pages/OurContacts/OurContacts";
 import Category from "./pages/Category/Category";
 import CurrentProductCard from "./components/CurrentProductCard/CurrentProductCard";
+import Profile from "./pages/Profile/Profile";
+import Auth from "./pages/Auth/Auth";
 
-// export const authRoutes = [
-//     {
-//         path: "/admin",
-//         Component: Admin
-//     },
-// ]
+export const authRoutes = [
+  // {
+  //   path: "/admin",
+  //   Component: Admin,
+  // },
+  {
+    path: "/profile",
+    Component: <Profile />,
+  },
+];
 
 export const publicRoutes = [
   {
@@ -65,18 +71,14 @@ export const publicRoutes = [
     path: "/product" + "/:id",
     Component: <CurrentProductCard />,
   },
-  // {
-  //     path: "/login",
-  //     Component: <Shop/>
-  // },
-  // {
-  //     path: "/registration",
-  //     Component: Shop
-  // },
-  // {
-  //     path: DEVICE_ROUTE + '/:id',
-  //     Component: DevicePage
-  // },
+  {
+    path: "/login",
+    Component: <Auth />,
+  },
+  {
+    path: "/registration",
+    Component: <Auth />,
+  },
   {
     path: "*",
     Component: <NotFound />,

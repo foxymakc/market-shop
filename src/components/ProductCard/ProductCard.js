@@ -7,6 +7,9 @@ import "./ProductCard.css";
 export default function ProductCard({ productInfo }) {
   const dispatch = useDispatch();
   const basketRedux = useSelector((state) => state.basketProduct);
+  const isBasket = basketRedux.products.some(
+    (item) => +item.id === productInfo.id
+  );
   const addInBasketProducts = (data) => {
     dispatch(addInBasketProductsAction(data));
   };
@@ -14,6 +17,7 @@ export default function ProductCard({ productInfo }) {
     //запрос на бэк для добавления в корзину
     addInBasketProducts(productInfo);
   }
+
   return (
     <li className="product-card">
       <NavLink
@@ -30,7 +34,9 @@ export default function ProductCard({ productInfo }) {
         <div className="product-card__bottom-container">
           <div className="product-card__price-container">
             <p className="product-card__price-text">{productInfo.price} ₽</p>
-            <p className="product-card__sale-text">{productInfo.sale} ₽</p>
+            <p className="product-card__sale-text">
+              {productInfo.sale.length > 1 ? `${productInfo.sale} ₽` : ""}{" "}
+            </p>
           </div>
           <p className="product-card__name-text">{productInfo.name}</p>
         </div>
@@ -39,7 +45,7 @@ export default function ProductCard({ productInfo }) {
         <p className="product-card__basket-container-text">
           {productInfo.name}
         </p>
-        {basketRedux.products.includes(productInfo) ? (
+        {isBasket ? (
           <NavLink
             className="product-card__basket-btn product-card__basket-btn-active"
             to="/basket"

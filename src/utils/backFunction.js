@@ -1,4 +1,4 @@
-import { listProduct } from "./consts";
+import { listProduct, listBasketUser } from "./consts";
 
 ////////функционал который должен выполняться на бэке//////////
 ////////////////////----ЗАГЛУШКА------/////////////////////////
@@ -75,3 +75,49 @@ function Filter(renderElements, sumElement, filter, arr) {
     return data;
   }
 }
+
+export const BackLogin = (email, password) => {
+  return new Promise((resolve, reject) => {
+    let auth;
+    let jwt;
+    if (email === "1234@mail.ru") {
+      if (password === "123") {
+        auth = true;
+        jwt = "TEST123";
+        return resolve({ auth, jwt });
+      }
+    }
+    return reject((auth = false));
+  });
+};
+
+export const BackCheckToken = (token) => {
+  return new Promise((resolve, reject) => {
+    let auth;
+    if (token === "TEST123") {
+      auth = true;
+      return resolve(auth);
+    }
+    return reject((auth = false));
+  });
+};
+
+export const BackgetUserInfo = (token) => {
+  return new Promise((resolve, reject) => {
+    let userInfo;
+    if (token === "TEST123") {
+      userInfo = { name: "Тестовый Пользователь", phone: "8 000 000 00 00" };
+      return resolve(userInfo);
+    }
+    return reject(console.error("Ошибка"));
+  });
+};
+
+export const BackgetUserBasket = (token) => {
+  return new Promise((resolve, reject) => {
+    if (token === "TEST123") {
+      return resolve(listBasketUser);
+    }
+    return reject(console.error("Ошибка"));
+  });
+};

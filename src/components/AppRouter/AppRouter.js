@@ -1,14 +1,16 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { publicRoutes } from "../../routes";
+import { publicRoutes, authRoutes } from "../../routes";
+import { useSelector } from "react-redux";
 
 export default function AppRouter() {
+  const userRedux = useSelector((state) => state.user);
   return (
     <Routes>
-      {/* {currentUser.isAuth &&
+      {userRedux.isAuth &&
         authRoutes.map(({ path, Component }) => (
-          <Route key={path} path={path} component={Component} exact />
-        ))} */}
+          <Route key={path} path={path} element={Component} exact />
+        ))}
       {publicRoutes.map(({ path, Component }) => (
         <Route key={path} path={path} element={Component} exact />
       ))}

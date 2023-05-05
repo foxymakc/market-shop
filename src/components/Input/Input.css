@@ -1,0 +1,78 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.input__label {
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  position: absolute;
+  top: 35%;
+  left: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input__item {
+  border: none;
+  border-bottom: 1px solid #f4c500;
+  padding-bottom: 7px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  outline: none;
+  background-color: transparent;
+  box-shadow: inset 20px 20px 0px 20px #ffffff;
+  text-align: end;
+}
+
+.input__item:-webkit-autofill:focus:valid {
+  border-bottom: 1px solid #1cf400;
+}
+
+.input__item:focus:valid {
+  border-bottom: 1px solid #1cf400;
+}
+
+.input__item:focus:invalid {
+  border-bottom: 1px solid #ee3465;
+}
+
+.input input:focus ~ label,
+.input input:valid ~ label {
+  top: -10px;
+}
+
+/* .input input:focus ~ label,
+.input input:invalid ~ label {
+  top: -10px;
+} */
+
+.input__item_error {
+  color: #ee3465;
+}
+
+.input__item_error:focus {
+  border-bottom: 1px solid #ee3465;
+}
+
+.input__error-span {
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ee3465;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
